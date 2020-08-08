@@ -4,6 +4,7 @@ WORKDIR /app
 COPY requirements.txt /app
 RUN pip3 install -r requirements.txt
 COPY src /app/
-EXPOSE 6000
+ENV BASE_URL="http://c1:6000"
+EXPOSE 5000
 #CMD ["sleep","3600"]
 CMD ["python","app.py"]
